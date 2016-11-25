@@ -62,10 +62,10 @@ class Application(tk.Frame):
         self.label.configure(bg=self.c)
         print('down', e.char)
 
-    def set_random_color(self):
-        r = lambda: random.randint(0, 255)
-        rc = '#%02X%02X%02X' % (r(), r(), r())
+    def set_random_color(self,lr=0,hr=255,lg=0,hg=255,lb=0,hb=255):
+        rc = '#%02X%02X%02X' % (random.randint(lr, hr), random.randint(lg, hg), random.randint(lb, hb))
         return rc
+
 
 
 root = tk.Tk()
