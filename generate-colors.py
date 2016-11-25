@@ -58,11 +58,11 @@ class Application(tk.Frame):
                 self.writer.writerow(row)
             except :
                 print("Writer error")
-        self.c = self.set_random_color()
+        self.c = self.set_random_color(lg=155,lb=100, hb=150,lr=155)
         self.label.configure(bg=self.c)
         print('down', e.char)
 
-    def set_random_color(self,lr=0,hr=255,lg=0,hg=255,lb=0,hb=255):
+    def set_random_color(self,lr=128,hr=255,lg=0,hg=255,lb=0,hb=255):
         rc = '#%02X%02X%02X' % (random.randint(lr, hr), random.randint(lg, hg), random.randint(lb, hb))
         return rc
 
